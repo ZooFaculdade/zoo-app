@@ -13,16 +13,18 @@ public class GetEnclosuresController {
         this.enclosureService = new EnclosureService();
     }
 
-    public void getEnclosures() {
+    public List<Enclosure> getEnclosures() {
         List<Enclosure> enclosures = enclosureService.getEnclosures();
 
         if (enclosures.isEmpty()) {
             System.out.println("No castrated enclosures 🪶");
+            return enclosures;
         } else {
             for (Enclosure enclosure : enclosures) {
                 System.out.println(enclosures);
             }
             // System.out.println(enclosures);
         }
+        return enclosures;
     }
 }

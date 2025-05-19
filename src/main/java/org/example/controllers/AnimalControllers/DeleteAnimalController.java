@@ -10,12 +10,14 @@ public class DeleteAnimalController {
         this.animalService = new AnimalService();
     }
 
-    public void deleteAnimal(int animalId) {
+    public boolean deleteAnimal(int animalId) {
         boolean success = animalService.deleteAnimal(animalId);
         if (success) {
             System.out.println("Animal successfully deleted! 🐻‍❄️");
+            return true;
         } else {
             System.out.println("Error on deleting animal. 🦐");
         }
+        return false;
     }
 }

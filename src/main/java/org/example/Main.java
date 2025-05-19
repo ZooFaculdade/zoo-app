@@ -1,5 +1,10 @@
 package org.example;
 
+import org.example.controllers.AnimalControllers.CreateAnimalController;
+import org.example.controllers.EnclosureControllers.CreateEnclosureController;
+import org.example.controllers.EnclosureControllers.UpdateEnclosureController;
+
+import java.util.Arrays;
 import java.util.logging.Logger;
 
 public class Main {
@@ -8,10 +13,10 @@ public class Main {
     public static void main(String[] args) {
 
         //CreateEnclosureController enclosureController = new CreateEnclosureController();
-        //enclosureController.createEnclosure(0, 6, "Cat Land", Arrays.asList("Felinos", "Carnívoros"));
+        //enclosureController.createEnclosure(0, 6, "Prisão", Arrays.asList("Fabio", "Bruno"));
 
         //UpdateEnclosureController updateEnclosureController = new UpdateEnclosureController();
-        //updateEnclosureController.updateEnclosure(2, 15, "Cat Land", Arrays.asList("Felinos", "Gatos"));
+        //updateEnclosureController.updateEnclosure(1, 15, "Nome sei la", Arrays.asList("Felinos", "Gatos"));
 
         //DeleteEnclosureController deleteEnclosureController = new DeleteEnclosureController();
         //deleteEnclosureController.deleteEnclosure(4);
@@ -22,8 +27,8 @@ public class Main {
         //GetEnclosureController getEnclosureController = new GetEnclosureController();
         //getEnclosureController.getEnclosure(1);
 
-        //CreateAnimalController createAnimalController = new CreateAnimalController();
-        //createAnimalController.createAnimal("Gato", "Tonho", 2, "Sphynx", "Mamífero", "Felinos", "3");
+        CreateAnimalController createAnimalController = new CreateAnimalController();
+        createAnimalController.createAnimal("fabio", "Fabio", 21, "humano", "Mamífero", "Fabio", "5");
 
         //UpdateAnimalController updateAnimalController = new UpdateAnimalController();
         //updateAnimalController.updateAnimal(3, "Gato", "Tunico", 2, "Sphynx", "Mamífero", "Felinos", "3");

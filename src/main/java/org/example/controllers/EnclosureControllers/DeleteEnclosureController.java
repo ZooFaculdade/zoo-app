@@ -10,12 +10,14 @@ public class DeleteEnclosureController {
         this.enclosureService = new EnclosureService();
     }
 
-    public void deleteEnclosure(int enclosureId) {
+    public boolean deleteEnclosure(int enclosureId) {
         boolean success = enclosureService.deleteEnclosure(enclosureId);
         if (success) {
             System.out.println("Enclosure successfully deleted! 🐻‍❄️");
+            return true;
         } else {
             System.out.println("Error on deleting enclosure. 🦐");
         }
+        return false;
     }
 }

@@ -14,12 +14,14 @@ public class CreateAnimalController {
         this.animalService = animalService;
     }
 
-    public void createAnimal(String name, String nickname, int age, String species, String bioClass, String bioOrder, String enclosureId) {
+    public boolean createAnimal(String name, String nickname, int age, String species, String bioClass, String bioOrder, String enclosureId) {
         boolean success = animalService.createAnimal(name, nickname, age, species, bioClass, bioOrder, enclosureId);
         if (success) {
             System.out.println("Animal successfully created! 🐻‍❄️");
+            return true;
         } else {
             System.out.println("Error on creating animal. 🦐");
         }
+        return false;
     }
 }

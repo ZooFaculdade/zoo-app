@@ -13,16 +13,18 @@ public class GetAnimalsController {
         this.animalService = new AnimalService();
     }
 
-    public void getAnimals() {
+    public List<Animal> getAnimals() {
         List<Animal> animals = animalService.getAnimals();
 
         if (animals.isEmpty()) {
             System.out.println("No castrated animals 🪶");
+            return animals;
         } else {
             for (Animal animal : animals) {
                 System.out.println(animal);
             }
             // System.out.println(animals);
         }
+        return animals;
     }
 }

@@ -11,12 +11,14 @@ public class CreateEnclosureController {
         this.enclosureService = new EnclosureService();
     }
 
-    public void createEnclosure(int currentOccupancy, int capacity, String name, List<String>orders) {
+    public boolean createEnclosure(int currentOccupancy, int capacity, String name, List<String>orders) {
         boolean success = enclosureService.createEnclosure(currentOccupancy, capacity, name, orders);
         if (success) {
             System.out.println("Enclosure successfully created! 🐻‍❄️");
+            return true;
         } else {
             System.out.println("Error on creating enclosure. 🦐");
         }
+        return false;
     }
 }
