@@ -212,6 +212,7 @@ public class ZooView {
         JTextField speciesField = new JTextField(animal.getSpecies());
         JTextField bioClassField = new JTextField(animal.getBioClass());
         JTextField bioOrderField = new JTextField(animal.getBioOrder());
+        JTextField enclosureIdField = new JTextField(animal.getEnclosureId());
 
         JPanel panel = new JPanel(new GridLayout(0, 2));
         panel.add(new JLabel("Nome:"));
@@ -226,6 +227,8 @@ public class ZooView {
         panel.add(bioClassField);
         panel.add(new JLabel("Ordem:"));
         panel.add(bioOrderField);
+        panel.add(new JLabel("Número de cela:"));
+        panel.add(enclosureIdField);
 
         int result = JOptionPane.showConfirmDialog(null, panel, "Editar Animal", JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE);
 
@@ -242,7 +245,7 @@ public class ZooView {
                         speciesField.getText().trim(),
                         bioClassField.getText().trim(),
                         bioOrderField.getText().trim(),
-                        animal.getEnclosureId()
+                        enclosureIdField.getText().trim()
                 );
 
                 if (updated) {
